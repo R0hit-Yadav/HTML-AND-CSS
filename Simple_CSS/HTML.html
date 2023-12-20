@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS.css">
+    <title>ALL ABOUT CSS</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<fieldset style="background-color: #ffcec6;"><Legend><b>Normal Css(LOC:11)</b></Legend>
+    <p>HI!! THIS IS ALL ABOUT CSS(FOR CENTER AND RED)</p>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><Legend><b>Normal Css(LOC:16)</b></Legend>
+    <p id="p1">Hello World (this is not effected by upper style) </p>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>How to link css width HTML?(LOC:21)</b></legend>
+    <p1>For link with html write<br></p1>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Iternal CSS(LOC:26)</b></legend>
+    <p1>You Can do Css in html file(using style tage) like:</p1>
+    <style>
+        h3{
+            color:rgb(224, 15, 50);
+            text-align: center;
+        }
+    </style>
+    <h3> Css inside HTML</h3>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>CSS comments(LOC:38)</b></legend>
+    <p1>You can comments code using /**/</p1>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Css color(LOC:43)</b></legend>
+    <p1>You can do color in 4 ways
+        <br>1.Normal Style color
+        <br>2.RGB(red,green,blue)
+        <br>3.HEX(hexadecimal color code)
+        <br>4.HSL(hue,saturation,lightless)
+    </p1>
+    <fieldset><legend><b>Simple(LOC:50)</b></legend>
+        <h2 style="color:Tomato;">Hello Coders!</h2>
+        <p1 style="color:lightseagreen;">HII!! My Name is Rohit </p>
+        <p1 style="color:limegreen;">Am I doing Well??</p>
+    </fieldset>
+    <fieldset><legend><b>RGB(LOC:55)</b></legend>
+        <h2 style="background-color:rgb(255,0,0);">Hello Coders!</h2>
+        <p1 style="background-color: rgba(255,99,71,0.4);">It is RGB</p1><br>
+    </fieldset>
+    <fieldset><legend><b>HEX(#rrggbb)(LOC:59)</b></legend>
+        <h2 style="background-color:#ff6347;">Hello Coders!</h2>
+        <p1 style="background-color: #3cb371;">It is HEX</p1><br>
+    </fieldset>
+    <fieldset><legend><b>HSL(,%,%)(LOC:63)</b></legend>
+        <h2 style="background-color:hsl(240,100%,50%);">Hello Coders!</h2>
+        <p1 style="background-color: hsl(248,53%,58%)">It is HSL</p1><br>
+    </fieldset>
+</fieldset>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Back-Ground(LOC:71)</b></legend>
+    <p1>background-color<br>
+        background-image<br>
+        background-repeat<br>
+        background-attachment<br>
+        background-position<br></p1>
+</fieldset>
+<br>
+<fieldset  class="back_color"><legend><b>Background-color(LOC:79)</b></legend>
+    <style>
+        .back_color
+        {
+            background-color: lawngreen;
+        }
+        
+    </style>
+    <p1>This is background-color</p1>
+</fieldset>
+<br>
+
+<fieldset  class="back_img" style="height: 300px;"><legend><b>Background-image(LOC:91)</b></legend>
+    <style>
+        .back_img
+        {
+            background-image: url(ganeshji.jpg);
+            
+        }
+    </style>
+    <p1 style="color: white;">This is background-image</p1>
+</fieldset>
+<br>
+
+<fieldset  class="back_repeat_position_attachment_shorthhand" style="height: 300px;"><legend><b>Background-repeat(LOC:103)</b></legend>
+    <style>
+        .back_repeat_position_attachment_shorthhand
+        {
+            background-image: url(ganeshji.jpg);
+            background-repeat: repeat-y;
+            background-position: right top;
+            background-attachment: fixed;
+            
+        }
+    </style>
+    <p1 style="color: white;">This is background-repeat-position-attachment</p1>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Border(LOC:118)</b></legend>
+    <style>
+        .dotted
+        {
+            border-style: dotted;
+            border-width: 5px;
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+        }
+        .dashed 
+        {
+            border-style: dashed;
+            border-width: medium;
+        }
+        .solid 
+        {
+            border-style: solid;
+            border-width: thick;
+        }
+        .double 
+        {
+            border-style: double;
+            border-color: red;
+        }
+        .groove 
+        {
+            border-style: groove;
+            border-color: red green blue yellow
+        }
+        .ridge 
+        {
+            border-style: ridge;
+        }
+        .inset 
+        {
+            border-style: inset;
+            border-left: 6px solid red;
+        }
+        .outset 
+        {
+            border-style: outset;
+            border-bottom: 6px solid red;
+        }
+        .none 
+        {
+            border-style: none;
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+        .hidden 
+        {
+            border-style: hidden;
+        }
+        .mix 
+        {
+            border-style: dotted dashed solid double;
+        }
+    </style>
+    <p1>Border type,width,color,side,shorthand,rounded border</p1><br><br><br>
+    <p1 class="dotted">A dotted border.</p1><br><br>
+    <p1 class="dashed">A dashed border.</p1><br><br>
+    <p1 class="solid">A solid border.</p1><br><br>
+    <p1 class="double">A double border.</p1><br><br>
+    <p1 class="groove">A groove border.</p1><br><br>
+    <p1 class="ridge">A ridge border.</p1><br><br>
+    <p1 class="inset">An inset border.</p1><br><br>
+    <p1 class="outset">An outset border.</p1><br><br>
+    <p1 class="none">No border.</p1><br><br>
+    <p1 class="hidden">A hidden border.</p1><br><br>
+    <p1 class="mix">A mixed border.</p1><br><br>
+   
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Margin(LOC:194)</b></legend>
+    <style>
+        .margin
+        {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+        }
+        
+    </style>
+    <p1 class="margin">This is margin</p1>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Margin auto(LOC:209)</b></legend>
+    <style>
+        .margin1
+        {
+           margin: auto;
+        }
+        
+    </style>
+    <p1 class="margin">This is margin auto</p1>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Padding(LOC:221)</b></legend>
+    <style>
+        .padding
+        {
+            border: 1px solid black;
+            background-color: lightblue;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+        }
+        
+    </style>
+    <div class="padding">it has top 50px,right 30px,bottom 50px,left 80px as you can see</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Height/width(LOC:238)</b></legend>
+    <style>
+        .hight-width
+        {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        
+    </style>
+    <div class="hight-width"></div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Box model(LOC:252)</b></legend>
+    <style>
+        .box-model
+        {
+           background-color: aquamarine;
+           width: 300px;
+           height: 200px;
+           border: 20px solid black;
+           padding: 50px;
+           margin: 20px;
+        }
+        
+    </style>
+    <div class="box-model">This is example of box-model with<br>background-color<br>
+    hight-width,border,padding and margin</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Outline(LOC:270)</b></legend>
+    <style>
+        .Outline
+        {
+           outline: solid 2px;
+           border: 8px solid green;
+           margin: auto;
+           padding: 20px;
+        }
+        .Outline_1
+        {
+            border: 3px solid black;
+            outline-style: solid;
+            outline-color: red;
+            outline-width: 5px;
+        }
+        .Outline_2
+        {
+            margin: 30px;
+            border: 1px solid black;
+            outline: 1px solid red;
+            outline-offset: 15px;
+        }
+        
+    </style>
+    <div class="Outline">Outline solid black 2px</div><br>
+    <div class="Outline_1">outline width and color</div><br>
+    <div class="Outline_2">outline outline-offset gap between border and outline</div><br>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Text Formating(LOC:301)</b></legend>
+    <style>
+        .heading
+        {
+            text-align: center;
+            color: blue;
+            text-transform: uppercase;
+
+        }
+        .peregraph
+        {
+            text-align: justify;
+            letter-spacing: 3px;
+
+        }
+        .unique
+        {
+            text-decoration: none;
+            color: red;
+
+        }
+        .center
+        {
+            text-align: center;
+
+        }
+        .left
+        {
+            text-align: left;
+
+        }
+        .right
+        {
+            text-align: right;
+
+        }
+        .justify
+        {
+            text-align: justify;
+        }
+        .right-to-left
+        {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        .overline
+        {
+            text-decoration-line: overline;
+            word-spacing: 10px;
+        }
+        .line-through
+        {
+            text-decoration-line: line-through;
+            text-decoration-color: blue;
+        }
+        .underline
+        {
+            text-decoration-line: underline;
+            text-decoration-thickness: 2px;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+        .over-underline
+        {
+            text-decoration-line: overline underline;
+            text-decoration-color: red;
+            text-decoration-style: wavy;
+            text-transform: capitalize;
+            letter-spacing: 5px;
+        }
+        .shadow
+        {
+            text-shadow: 2px 2px 5px red;
+
+        }
+        
+        
+    </style>
+    <h1 class="heading">Text Formatting</h1>
+    <p1 class="peregraph">it has text-align justify and with latter space 3px and we 
+        can add this type of formatting using a tage like:
+        <a href="tryit.asp?filename=trycss_text">You can see change </a>and normal.</p1>
+        <br><br>
+        =>Alignments<br>
+    <p1 class="center">this is center</p1><br>
+    <p1 class="left">this is left</p1><br>
+    <p1 class="right">thid is right</p1><br>
+    <p1 class="justify">thid is justify</p1><br>
+    <p1 class="right-to-left">this is reverse</p1><br>
+    <p1 class="overline">Overline</p1><br>
+    <p1 class="line-through">line-through</p1><br>
+    <p1 class="underline">underline</p1><br>
+    <p1 class="over-underline">over-underline</p1><br>
+    <p1 class="shadow">shadow</p1><br>
+
+</fieldset>
+<br>
+
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Fonts(LOC:400)</b></legend>
+    <style>
+        .font
+        {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        .font-style
+        {
+            font-style: italic;
+        }
+        .font-size
+        {
+            font-size: 20px;
+        }
+        
+        
+    </style>
+    <div class="font">Lucida console font</div><br>
+    <div class="font-style">italic</div>
+    <div class="font-size">font size 20px</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Icons(LOC:423)</b></legend>
+    
+    <i class="fas fa-cloud"></i><br>
+    <i class="fas fa-heart"></i><br>
+    
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Link Button(LOC:431)</b></legend>
+    <style>
+    .link
+    {
+        background-color: #36cef4;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .link:hover
+    {
+         background-color: red;
+    }
+    
+    </style>
+    <a class="link" href="https://github.com/R0hit-Yadav" target="_blank">My Github Link</a>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Lists(LOC:453)</b></legend>
+    <style>
+    .oll
+    {
+        background: #fffd99;
+        padding: 20px;
+    }
+
+    .ull
+    {
+        background: #33ffff;
+        padding: 20px;
+    }
+
+    ol li 
+    {
+        background: #6fdd07;
+        color: darkred;
+        padding: 5px;
+        margin-left: 35px;
+    }
+
+    ul li 
+    {
+        background: #ccffd3;
+        color: darkblue;
+        margin: 5px;
+    }
+    </style>
+    <ol class="oll">
+        <li>Jay shree ram</li>
+        <li>Jay shree ganesh</li>
+        <li>Om namha Shivay</li>
+      </ol>
+      
+      <ul class="ull">
+        <li>Jay shree ram</li>
+        <li>Jay shree ganesh</li>
+        <li>Om namha Shivay</li>
+      </ul>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Table(LOC:496)</b></legend>
+    <style>
+    
+    table,td,th
+    {
+        border: 1px solid rgb(233, 46, 46);
+
+    }
+    table
+    {
+        border-collapse: collapse;
+        width: 50%;
+
+    }
+    th
+    {
+        background-color: rgb(0, 238, 255);
+    }
+    td
+    {
+        text-align: center;
+
+    }
+    tr:hover
+    {
+        background-color: yellow;
+
+    }
+    </style>
+   <div style="overflow-x: auto;">
+   <table>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Rollno</th>
+    </tr>
+    <tr>
+      <td>Rohit</td>
+      <td>Yadav</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Jay</td>
+      <td>Doshi</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Dev</td>
+      <td>Patel</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Ronil</td>
+      <td>Panchal</td>
+      <td>4</td>
+    </tr>
+  </table>
+</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Max-width(LOC:557)</b></legend>
+    <style>
+        .without_max
+        {
+            width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+        .with_max 
+        {   
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+
+    
+    </style>
+   <div class="without_max">This div element has width: 500px;</div>
+   <br>
+   <div class="with_max">This div element has max-width: 500px;</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Position(LOC:580)</b></legend>
+    <style>
+        .static
+        {
+            position: static;
+            border: 3px solid #73AD21;
+        }
+        .relative
+        {
+            position: relative;
+            left: 30px;
+            border: 3px solid #73AD21;
+        }
+        .fixed 
+        {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #73AD21;
+        }
+        .absolute 
+        {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+        .sticky 
+        {
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: green;
+            border: 2px solid #4CAF50;
+        }
+
+    
+    </style>
+   <div class="static">Static</div><br>
+   <div class="relative">Relative</div><br>
+   <!-- <div class="fixed">fixed</div> -->
+   <!-- <div class="absolute">absolute</div><br> -->
+   <div class="sticky">sticky</div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Z index(LOC:629)</b></legend>
+    <style>
+        .z_index
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    
+    </style>
+    <h1>This is a heading</h1>
+    <!-- <div class="z_index"> <img src="ganeshji.jpg">Hello</div> -->
+  
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Overflow(scroll bar)(LOC:646)</b></legend>
+    <style>
+        .overflow
+        {
+            background-color: coral;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    
+    </style>
+   <div class="overflow">This is<br>scroll<br>bar<br><br><br><br><br><br>Thank you for scroll!!
+   </div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Combinators(LOC:663)</b></legend>
+    <style>
+        div ~ p 
+        {
+            background-color: yellow;
+        }
+    
+    </style>
+   <p>P1</p>
+   <p>PR</p>
+   <div>
+     <p>P2</p>
+   </div>
+   <p>P3</p>
+   <p>P4</p>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Navabar(LOC:681)</b></legend>
+    <style>
+        ul 
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }   
+        li 
+        {
+            float: left;
+        } 
+        li a 
+        {
+            display: block;
+            color: rgb(235, 7, 7);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover 
+        {
+            background-color: #111;
+        }
+    
+    </style>
+   <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>DropDown(LOC:718)</b></legend>
+    <style>
+        .dropbtn 
+        {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown 
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content 
+        {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            
+        .dropdown-content a 
+        {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            
+        .dropdown-content a:hover {background-color: #f1f1f1}
+
+            
+        .dropdown:hover .dropdown-content 
+        {
+            display: block;
+        }
+
+            
+        .dropdown:hover .dropbtn 
+        {
+            background-color: #3e8e41;
+        }
+    
+    </style>
+   <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+    <a href="#">HII</a>
+    <a href="#">HELLO</a>
+    <a href="#">HAY</a>
+    </div>
+  </div>
+</fieldset>
+<br>
+
+<fieldset style="background-color: #ffcec6;"><legend><b>Math(LOC:782)</b></legend>
+    <style>
+        .math 
+        {
+            background-color: yellow;
+            height: 100px;
+            width: min(50%, 300px);
+        }
+    </style>
+    <div class="math">Math Function</div>
+        
+</fieldset>
+<br>
+</body>
+</html>

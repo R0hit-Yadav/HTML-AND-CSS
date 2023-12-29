@@ -1,0 +1,855 @@
+<!--📕QB-7                 CH=====================================4
+Write HTML & CSS script to design a signup form having fields like username, password, choices of sports like Cricket, Hockey, Badminton & Tennis. 
+Include gender field, 
+submit and reset buttons. Follow below requirements:
+i) While hovering username & password, its background should turn yellow color and pink color respectively. 
+ii) While clicking sports and gender fields, text should turn to red color.
+iii) Both submit and reset button text should turn blue, while hovering.
+iv) Use appropriate selectors. -->
+<html>
+<head>
+    <style>
+      input[type="text"]:hover
+      {
+        background-color:yellow;
+      }
+      input[type="password"]:hover
+      {
+        background-color:pink;
+      }
+      input[type="submit"]:hover
+      {
+        color:blue;
+      }
+      input[type="reset"]:hover
+      {
+        color:blue;
+      }
+      
+      label:active
+      {color:red;}
+      
+     </style>
+ </head>
+<body>
+<form>
+    USERNAME: <input type="text"> <br>
+    PASSWORD:<input type="password"><br>
+    SPORTS:<label><input type="checkbox" class="a1">CRICKET</label><br>
+    <label><input type="checkbox" >HOCKEY</label><br>
+    <label><input type="checkbox" >BADMINTON</label><br>
+    <label> <input type="checkbox" >TENNIS</label><br>
+    GENDER:<label><input type="radio" name="gr1">MALE </label><label><input type="radio" name="gr1">FEMALE </label><br>
+    <input type="submit">
+    <input type="reset">
+    
+</form>
+ </html>
+
+
+
+<!--📕QB-8 
+Write an HTML & CSS script to divide a paragraph in 3 columns having 5px spacing in between with dashed border. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p{
+        column-count: 3;
+        word-spacing: 5px;
+        border-style: dashed;
+    }
+   </style>
+   </head>
+   <body>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, rem, et ipsa explicabo, corporis maiores ducimus similique dignissimos molestiae saepe temporibus. Unde nulla itaque praesentium suscipit, officiis, doloremque facilis expedita autem quam aperiam pariatur doloribus ipsum, hic veritatis ut est molestias. Veritatis, facere molestias perferendis illum dolorem magni sit explicabo beatae culpa! Eos necessitatibus, distinctio dolorum ea doloremque enim odit cumque, iste reprehenderit ut quibusdam quia recusandae magni quam suscipit perspiciatis quos optio expedita ipsam debitis unde nemo velit id! Similique natus excepturi in deserunt tempora voluptas cupiditate, iusto porro nobis voluptatum minima, neque labore. Sit, suscipit consequuntur! Minus, doloribus.</p>
+   </body>
+
+
+
+<!-- 📕QB-10 
+Write down HTML/CSS code in separate CSS file and also show how to link this CSS file in HTML file for following. 
+Take two header tag. First letter of first header 
+tag should be red color and 160% size. -->
+<html> 
+<head> 
+   <link href="QB-10.css" rel="stylesheet"/>
+   <style>
+    #header::first-letter 
+    { 
+        font-size: 160%;
+        color: red;
+    } 
+
+   </style>
+</head> 
+<body> 
+    <h1 id="header"> Welcome to the javaTpoint.com😃 </h1> 
+	<h2> 😃This is an example of ::first-letter pseudo-element. </h2>
+</body> 
+</html>
+
+
+<!--📕 QB-17 
+Write following style in separate CSS file.
+1)write one paragraph using <p> tag..color of first line of paragraph should be green and text is italic.
+2)when you select any text of heading ,background color of  selected text will become grey. 
+create one ordered list which is start with capital roman letters. color of list should be green and font-size should be 30px. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="QB-17.css">
+    <title>Your HTML Page</title>
+    <style>
+        p::first-line 
+        {
+            color: green;
+            font-style: italic;
+        }
+
+        h1::selection, h2::selection {
+            background-color: grey;
+        }
+        ol 
+        {
+            list-style-type: upper-roman;
+            color: green;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Select me</h1>
+    <h2>Select me too</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus tempore eius qui in porro, 
+        quibusdam molestiae ut optio ratione reiciendis debitis iusto corporis aperiam assumenda sed perferendis! Ad laborum quod 
+        </p>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+</body>
+</html>
+
+
+
+<!-- 📕QB-18 
+Write down HTML/CSS code that shows a menu that will float to the right of the page if the viewport is 380 pixels wide or wider 
+(if the viewport is less than 380 pixels, the menu will be on top of the content) -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+#main {margin-left: 4px;width:auto}
+
+#rightsidebar {
+  float: none;
+  width: auto;
+}
+
+.menuitem {
+  background: #CDF0F6;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 2px;
+}
+
+@media screen and (min-width: 380px) {
+  #rightsidebar {width: 200px; float: right;}
+  #main {margin-left: 16px;width:200px}
+}
+</style>
+</head>
+<body>
+    
+    
+  <div id="rightsidebar">
+    <ul type="none">
+      <li class="menuitem">Menu-item 1</li>
+      <li class="menuitem">Menu-item 2</li>
+      <li class="menuitem">Menu-item 3</li>
+      <li class="menuitem">Menu-item 4</li>
+      <li class="menuitem">Menu-item 5</li>
+    </ul>
+  </div>
+  <div id="main">
+    <h1>Resize the browser window to see the effect!</h1>
+    <p>This example shows a menu that will float to the left of the page if the viewport is 480 pixels wide or wider. 
+      If the viewport is less than 480 pixels, the menu will be on top of the content.</p>
+  </div>
+
+</body>
+</html>
+
+
+
+<!--📕 QB-28 
+Write HTML & CSS code to design registration form having fields like Name, Password, Contact Number, Gender, Submit button & Reset Button. 
+6Follow below requirements:
+•While clicking on Name text, background-color of its input field change to light-green.
+•While hovering on password & Contact number text, font-size of its input fields will increase respectively.
+•While clicking on gender fields, background-color of the text should change to blue.
+•Both submit & reset button text should bold & italic, while 
+hovering. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="QB-28.css">
+    <title>Registration Form</title>
+    <style>
+        
+    input[type="text"]:active
+    {
+      background-color: lightgreen;
+    }
+    input[type="password"]:hover
+    {       
+      font-size:150%;;
+    }
+    input[type="number"]:hover
+    {
+        font-size:150%;;
+    }
+    button:hover {
+        font-weight: bold;
+        font-style: italic;
+    }
+    label:active{
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+
+    <form>
+        Name:
+        <input type="text" id="name" name="name">
+        <br/>
+        Password:
+        <input type="password" id="password" name="password" value="mypassword">
+        <br/>
+        Contact Number:
+        <input type="number" name="contact" value="9898999999">
+        <br/>
+        Gender:
+        <label><input type="radio" name="r1" value="male"/>Male</label>
+        <label><input type="radio" name="r1" value="female"/>Female</label>
+        <br/>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
+
+
+
+<!--📕 QB-35 
+Write CSS to get following formatting for the paragraph. 
+i) text-color-green
+ii) text-indentation-2cm 35
+iii) font-courier
+iv) font-style-italic
+v) text-case-Uppercase  -->
+<html>
+<head>
+<style>
+p
+{ color:green;
+text-indent:2cm;
+text-transform:uppercase;
+font-family:courier;
+font-style:italic;
+}
+</style>
+</head>
+<body>
+<p>This is an example of text properties and font properties.
+</p>
+</body>
+</html>
+
+
+
+<!-- 📕QB-38 
+Write HTML & CSS script to design one banner of advertisement using <p> tag. 
+That text of advertise should move continuously from left end to right end, then return back from right to left end. 
+Use red and huge fonts for text. Advertise should begin after 1 second of loading page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Moving Banner</title>
+  <style>
+    body 
+    {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .banner 
+    {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      white-space: nowrap;
+      font-size: 3em;
+      color: red;
+      animation: moveBanner 10s linear infinite;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+
+    @keyframes moveBanner {
+      0% {
+        transform: translateX(-100%);
+        opacity: 1;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <p>This is your advertisement text!</p>
+  </div>
+</body>
+</html>
+
+
+<!-- 📕QB-39 
+Write a code to add background image. -->
+<html>
+<head>
+  <style>
+    div
+   {
+    background-image:url('file1.jpg');
+    background-repeat: repeat-x;
+   } 
+</style>
+</head>
+<body>
+<div>
+This<br>
+is<br>
+an<br>
+example<br>
+</div>
+</body>
+</html>
+
+
+<!--📕 QB-50 
+Write CSS code to display headings in navy color and the paragraph text in maroon color. -->
+<html>
+<head>
+  <style>
+    h1
+   {
+    color:navy;
+   } 
+   p
+   { color:maroon;
+   }
+</style>
+</head>
+<body>
+<h1>Example of color property</h1>
+<p>
+This<br>
+is<br>
+an<br>
+example<br>
+</p>
+</body>
+</html>
+
+
+<!--📕 QB-54 
+Write HTML/CSS script to display 2 sections of 40% width using <div> tag. 
+Both these sections are having title & description. Both these <div> should be horizontally adjecent to each other -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Sections Side by Side</title>
+  <style>
+    body 
+    {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .section 
+    {
+      width: 40%;
+      float: left;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .section:nth-child(odd) 
+    {
+      background-color: #f0f0f0;
+    }
+
+    h2 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    /* Clearfix to handle float */
+    .clearfix::after 
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h2>Section 1 Title</h2>
+    <p>Description for Section 1 goes here.</p>
+  </div>
+
+  <div class="section">
+    <h2>Section 2 Title</h2>
+    <p>Description for Section 2 goes here.</p>
+  </div>
+
+  <div class="clearfix"></div>
+</body>
+</html>
+
+
+
+<!-- 📕QB-56 
+Write a code to set the fonts for text using font-family property of CSS. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Family Example</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+
+    }
+  </style>
+</head>
+<body>
+  <p>This is a paragraph with the default font.</p>
+</body>
+</html>
+
+
+<!--📕 QB-59 
+Write a code to demonstrate use of CSS positioning property -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Positioning Example</title>
+  <style>
+    /* Static Positioning */
+    .static-example {
+      position: static;
+      border: 2px solid #333;
+      padding: 10px;
+    }
+    /* Relative Positioning */
+    .relative-example {
+      position: relative;
+      top: 20px;
+      left: 20px;
+      border: 2px solid #00f;
+      padding: 10px;
+    }
+    /* Absolute Positioning */
+    .absolute-example {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      border: 2px solid #f00;
+      padding: 10px;
+    }
+    /* Fixed Positioning */
+    .fixed-example {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      border: 2px solid #0f0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="static-example">
+    <p>Static Positioning</p>
+  </div>
+
+  <div class="relative-example">
+    <p>Relative Positioning</p>
+  </div>
+
+  <div class="absolute-example">
+    <p>Absolute Positioning</p>
+  </div>
+
+  <div class="fixed-example">
+    <p>Fixed Positioning</p>
+  </div>
+</body>
+</html>
+
+
+
+<!-- 📕QB-60 
+Write down HTML/CSS code to create table with 5 rows and 3 columns. Even no. of rows display in green color and odd no. of rows display in yellow color.  
+Use External CSS file. -->
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="QB-60.css"/>
+<style>
+    .class1
+    {
+        background-color:yellow;
+    }
+    .class2
+    {
+        background-color:green;
+    }
+
+</style>
+</head>
+<body>
+<table border="3">
+<tr class="class1">
+<td>abc</td>
+<td>pqr</td>
+<td>mnq</td>
+</tr>
+<tr class="class2">
+<td>abc</td>
+<td>pqr</td>
+<td>mnq</td>
+</tr>
+<tr class="class1">
+<td>abc</td>
+<td>pqr</td>
+<td>mnq</td>
+</tr>
+<tr class="class2">
+<td>abc</td>
+<td>pqr</td>
+<td>mnq</td>
+</tr>
+<tr class="class1">
+<td>abc</td>
+<td>pqr</td>
+<td>mnq</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+
+<!--📕 QB-61 
+Write an External CSS with following rules.
+i) To make all the headers with normal font and having size 150%. 
+ii) To display the paragraphs in arial font with bold style.
+Show the use of above css with html file by linking it.  -->
+HTML file
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="QB-61.css"/>
+<style>
+    h1,h2,h3,h4,h5,h6
+  {
+    font-size:150%;
+    font-style:normal;
+  } 
+  p,pre{
+  font-family:arial;
+  font-weight:bold;
+  }
+
+</style>
+</head>
+<body>
+<h1> This is an example of style sheet</h1>
+<h3> This is an example of style sheet</h3>
+<h6> This is an example of style sheet</h6>
+<pre> now you are an engineer
+this is a day of working
+tomoroow will be holiday.
+</pre>
+<p>
+you are not eligible for interview</p>
+</body>
+</html>
+
+
+<!--📕 QB-62 
+Write CSS code for the following:
+i)  Set the background color for the hover and active link states to "Yellow".
+ii) Set "paper.jpg" as the background image of the page. -->
+<html>
+<head>
+<style>
+    a:active{ 
+        color: yellow; 
+    } 
+   a:hover{
+  background-color:yellow;
+}
+body
+ {background-image:url('paper.jpg');
+}
+</style>
+</head>
+<body>
+<a href="http://www.google.com" target="_blank">
+CLICK HERE</a>
+</body>
+</html>
+
+
+<!--📕 QB-63
+Write the following styles in separate CSS file and also show how to link this CSS file in HTML file and show use of styles.
+i)  The headings should have normal font style and font's size should be 120%.
+ii)  Define class arial for paragraph which defines font family arial and font style bold having 3cm spacing for paragraph initialization. 
+iii) Apply background color orange and apply a background image "nature.jpg" and it should be repeated horizontaly only. -->
+<html>
+    <head>
+        <link href="QB-63.css" rel="stylesheet"/>
+        <style>
+             h1
+            {
+                font-style: normal;
+                font-size: 120%;
+            }
+            .arial
+            {font-family: Arial;
+            font-weight: bold;
+            text-indent: 3cm;
+
+            }
+            body{
+                background-color:orange;
+                background-image: url(nature.jpg);
+                background-repeat: repeat-x;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>this is an example of external stylesheet</h1>
+        <p class="arial">sdnfkdsfnksafsf</p>
+    </body>
+</html>
+
+
+<!--📕 QB-64
+Specify the CSS to provide following effects on link: 
+(1) after visited blue color 
+(2) before visited red color. -->
+<html>
+<head>
+    <style>
+        a:link
+        {color:red;}
+        a:visited
+        {color:blue;}
+        </style>
+        </head>
+        <body>
+            <a href="https://google.com" target="_blank">click here for GOOGLE</a>
+        </body>
+        </html>
+
+
+<!-- 📕QB-65 
+Write HTML/CSS script to check all pseudo classes on heading tags, paragraph tag, table tags and pre tag. 
+Comment on which pseudo class works for which tag. -->
+<html>
+<head>
+    <style>
+        h1:active
+        {color:red;}
+        h1:hover
+        {font-size:20px;}
+        table:hover
+        {background-color: pink;}
+        table:active
+        {background-color:yellow;}
+        p:hover{
+            font-size:30px;
+        }
+        p:active
+        {color:red;}
+        pre:hover{
+            font-size:20px;
+           
+        }
+        pre:active{
+            
+            color:orange;
+        }
+        </style>
+    </head>
+        <body>
+            <h1>this is an example</h1>
+            
+            <p>this is an example</p>
+            <pre>THIS 
+                IS 
+                AN
+                example
+                <pre>
+                    <table border="1" width="100px" height="100px">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </body>
+                </html>
+
+
+
+<!-- 📕QB-70 
+Write a code to apply the effect to only specific element using class selector.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Selector Example</title>
+  <style>
+    .special-effect 
+    {
+      color: #f00; /* Red text color */
+      font-weight: bold; /* Bold text */
+      text-decoration: underline; /* Underlined text */
+    }
+  </style>
+</head>
+<body>
+  <p>This is a regular paragraph.</p>
+  <p class="special-effect">This paragraph has a special effect applied using a class selector.</p>
+  <p>This is another regular paragraph.</p>
+</body>
+</html>
+
+
+
+<!--📕 QB-71
+How can a style rule be defined with an id red heading that gives red color to heading h1 with text of heading right aligned? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Heading Example</title>
+  <style>
+    #red-heading 
+    {
+      color: #ff0000; /* Red text color */
+      text-align: right; /* Right-aligned text */
+    }
+  </style>
+</head>
+<body>
+  <h1 id="red-heading">This is a red heading with right-aligned text.</h1>
+</body>
+</html>
+
+
+<!-- 📕QB-72 
+Define a class which defines a text alignment style to be left. Show how this same style can be applied to multiple tags? -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Alignment Class Example</title>
+  <style>
+    .left-align {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="left-align">Heading 1 Left Aligned</h1>
+  <p class="left-align">This is a paragraph with left-aligned text.</p>
+  <div class="left-align">This is a div with left-aligned text.</div>
+</body>
+</html>
+
+
+<!--📕📕QB-78 QB-79 QB-80 QB-81 QB-82
+Write a code to demonstrate the use of text-indent property.
+Write a code to demonstrate the use of word-spacing property 
+Write a code to demonstrate the use of letter-spacing property.
+Write a code to demonstrate the use of text-transform property.
+Write a code to demonstrate the use of text-decoration property. -->
+<html>
+<head>
+    <style>
+        pre{
+            text-align:center;
+            text-indent:3cm;
+            word-spacing:10px;
+            letter-spacing:5px;
+            text-transform:capitalize;
+            text-decoration:underline;
+        }
+
+        </style>
+        </head>
+        <body>
+            <pre> this is solution of 
+qb question no 
+78,
+79,
+80,
+81,
+82
+</pre>
+</body>
+</html>
+

@@ -1,0 +1,1074 @@
+<!--📕 QB-4                                        CH==========5
+Design following using CSS pagination ,add the transition property to the page links to create a transition effect on hover: -->
+<html>
+<head>
+<style>
+    .pagination
+    {
+    display:inline-block;
+    margin-top:70px ;
+
+    }
+    .pagination a
+    {
+        text-decoration:none;
+        border: 1px solid #ddd; 
+        color:black;
+        padding:10px 13px;
+        text-align:center;
+        font-size:20px;
+        cursor:auto;
+        float:left;
+    }
+    .pagination a.active
+    {background-color:lightblue;
+    }
+
+    .pagination a:hover:not(.active)
+    {background-color:lightgreen;
+    }
+
+</style>
+<head>
+<body>
+<div class="pagination">
+<a href="#">&laquo;</a>
+<a href="#">1</a>
+<a href="#" class="active">2</a>
+<a href="#">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+<a href="#">6</a>
+<a href="#">7</a>
+<a href="#">&raquo;</a>
+</div>
+
+
+</body>
+</html>
+
+<!--📕 QB-11 
+Write an HTML & CSS script to divide a paragraph in 3 columns having 5px spacing in between with dashed border -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    p{
+        column-count: 3;
+        word-spacing: 5px;
+        border-style: dashed;
+    }
+   </style>
+   </head>
+   <body>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, rem, et ipsa explicabo, corporis maiores ducimus similique dignissimos molestiae saepe temporibus. Unde nulla itaque praesentium suscipit, officiis, doloremque facilis expedita autem quam aperiam pariatur doloribus ipsum, hic veritatis ut est molestias. Veritatis, facere molestias perferendis illum dolorem magni sit explicabo beatae culpa! Eos necessitatibus, distinctio dolorum ea doloremque enim odit cumque, iste reprehenderit ut quibusdam quia recusandae magni quam suscipit perspiciatis quos optio expedita ipsam debitis unde nemo velit id! Similique natus excepturi in deserunt tempora voluptas cupiditate, iusto porro nobis voluptatum minima, neque labore. Sit, suscipit consequuntur! Minus, doloribus.</p>
+   </body>
+
+<!--📕 QB-12 
+Write an HTML & CSS script to design two tables having 3 rows & 3 columns of 50% width each horizontally adjacent to each other. 
+They have blue and green background colors respectively. If page turns to portrait mode, then background colors of tables should be swapped. 
+Responsive concept must be observed while shrinking width of page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Tables</title>
+  <style>
+   
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+
+   
+    .blue-table {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+   
+    .green-table {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+
+    
+    @media (orientation: portrait) {
+      .blue-table {
+        background-color: #2ecc71;
+      }
+
+      .green-table {
+        background-color: #3498db;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table class="blue-table">
+    <thead>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+      </tr>
+      <tr>
+        <td>Data 7</td>
+        <td>Data 8</td>
+        <td>Data 9</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Green Table -->
+  <table class="green-table">
+    <thead>
+      <tr>
+        <th>Header A</th>
+        <th>Header B</th>
+        <th>Header C</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data X</td>
+        <td>Data Y</td>
+        <td>Data Z</td>
+      </tr>
+      <tr>
+        <td>Data P</td>
+        <td>Data Q</td>
+        <td>Data R</td>
+      </tr>
+      <tr>
+        <td>Data M</td>
+        <td>Data N</td>
+        <td>Data O</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
+
+
+<!--📕 QB-13 
+Write an HTML and CSS script to design 3 sections having 20% height and full width. Apply following requirements:
+i)Each section has a title and a paragraph. By hovering each section, it should be enclosed by a red border. 
+ii) By hovering title of each section, it should be converted to red color.
+iii)By hovering paragraph of each section, it should take a 2cm of beginning space and letter of each word capital.
+iv) Store all CSS properties in global CSS variables. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Sections Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  :root {
+  --border-color: red;
+  --title-hover-color: red;
+  --paragraph-hover-indent: 2cm;
+  --paragraph-hover-transform: capitalize;
+}
+
+body {
+  margin: 0;
+}
+
+.custom-section {
+  height: 20vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: border 0.3s ease-in-out;
+}
+
+.custom-section:hover {
+  border: 2px solid var(--border-color);
+}
+
+.section-title {
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.section-title:hover {
+  color: var(--title-hover-color);
+}
+
+.section-paragraph {
+  margin: 0;
+  transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+.section-paragraph:hover {
+  transform: var(--paragraph-hover-transform);
+  margin-left: var(--paragraph-hover-indent);
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="custom-section" id="section1">
+    <h2 class="section-title">Section 1</h2>
+    <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </section>
+
+  <section class="custom-section" id="section2">
+    <h2 class="section-title">Section 2</h2>
+    <p class="section-paragraph">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </section>
+
+  <section class="custom-section" id="section3">
+    <h2 class="section-title">Section 3</h2>
+    <p class="section-paragraph">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </section>
+
+</body>
+</html>
+
+
+<!--📕 QB-17 
+Write HTML and CSS script to design one table having 3 columns and 5 rows. Add random data. While hovering, 
+it should be expanded around 50% horizontally, background-color and font color will become red and white respectively. 
+Expansion should take place in 2 seconds -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expandable Table</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  .expandable-table {
+  width: 100%;
+  border-collapse: collapse;
+  transition: all 2s ease-in-out;
+}
+
+.expandable-table:hover {
+  width: 150%;
+  background-color: red;
+}
+
+.expandable-table th,
+.expandable-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  color: black;
+}
+
+.expandable-table:hover th,
+.expandable-table:hover td 
+{
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+
+  <table class="expandable-table">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <tr>
+        <td>Data 4</td>
+        <td>Data 5</td>
+        <td>Data 6</td>
+      </tr>
+      <tr>
+        <td>Data 7</td>
+        <td>Data 8</td>
+        <td>Data 9</td>
+      </tr>
+      <tr>
+        <td>Data 10</td>
+        <td>Data 11</td>
+        <td>Data 12</td>
+      </tr>
+      <tr>
+        <td>Data 13</td>
+        <td>Data 14</td>
+        <td>Data 15</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+
+<!--📕 QB-22 
+Write down HTML/CSS code that will change both the background-color and the position of the <div> element when the animation is 25% complete, 
+50% complete, 75% complete  and again when the animation is 100% complete. also has a 2 seconds delay before starting the animation. 
+an animation should be played backwards first, then forwards, the animation continue for ever. initial background color is red, then it convert to yellow, 
+green and blue gradually. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color and Position Animation</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .animated-div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation: colorAndPosition 4s ease-in-out 2s infinite alternate;
+  }
+
+@keyframes colorAndPosition 
+{
+  0% {
+    background-color: red;
+    left: 0;
+  }
+  25% {
+    background-color: yellow;
+    left: 25%;
+  }
+  50% {
+    background-color: green;
+    left: 50%;
+  }
+  75% {
+    background-color: blue;
+    left: 75%;
+  }
+  100% {
+    background-color: red;
+    left: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="animated-div"></div>
+</body>
+</html>
+
+
+<!--📕 QB-28
+Design following by using CSS pagination. -->
+<html>
+<head>
+<style>
+    .pagination
+    {
+    display:inline-block;
+    margin-top:70px ;
+
+    }
+    .pagination a
+    {
+    width:28px;
+    text-decoration:none;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-radius:25%;
+    color:black;
+    padding:10px 13px;
+    text-align:center;
+    font-size:20px;
+    cursor:auto;float:left;
+    }
+    .pagination a.active
+    {background-color:lightblue;
+    }
+
+
+</style>
+<head>
+<body>
+<div class="pagination">
+<a href="#">&laquo;</a>
+<a href="#">1</a>
+<a href="#">2</a>
+<a href="#" class="active">3</a>
+<a href="#">4</a>
+<a href="#">5</a>
+<a href="#">6</a>
+<a href="#">7</a>
+<a href="#">&raquo;</a>
+</div>
+
+
+</body>
+</html>
+
+<!--📕 QB-29 
+Write down HTML & CSS code to increase the <div> element to be two times of its original width and three times of its original height with transition effect. -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enlarging Div with Transition</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  .enlarging-div 
+  {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    transition: width 1s, height 1s; /* Transition for width and height with a duration of 1 second */
+  }
+
+  .enlarging-div:hover 
+  {
+    width: 200px; /* Two times the original width */
+    height: 150px; /* Three times the original height */
+  }
+
+  </style>
+</head>
+<body>
+  <div class="enlarging-div"></div>
+</body>
+</html>
+
+
+
+<!--📕 QB-30 
+Write HTML & CSS code to design one banner using any heading tag. 
+That heading should move in counter-clockwise and complete its iteration then return back in clockwise on its starting position. 
+Use blue text color. And effect should begin after 3 second of loading page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Banner</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .moving-banner 
+    {
+      color: blue;
+      font-size: 24px;
+      position: relative;
+      animation: moveBanner 8s linear infinite, moveBackBanner 8s linear infinite;
+      animation-delay: 3s; /* Delay the start of the animation by 3 seconds */
+    }
+
+    @keyframes moveBanner 
+    {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes moveBackBanner {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <h1 class="moving-banner">Welcome to Our Website</h1>
+
+</body>
+</html>
+
+
+
+<!-- 📕QB-35 
+Write and HTML and CSS script to design one banner of advertisement using <p>tag. 
+That text of advertise should move continuously from left end to right end, then return back from right 
+to left end. Use red and huge fonts for text. Advertise should begin after 1 second of loading page. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advertisement Banner</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .advertisement 
+    {
+      font-size: 2em; /* Huge font size */
+      color: red;
+      white-space: nowrap; /* Prevent text from wrapping */
+      animation: moveBanner 8s linear infinite;
+      animation-delay: 1s; /* Delay the start of the animation by 1 second */
+    }
+
+    @keyframes moveBanner {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <p class="advertisement">Special Offer! 50% Off on Selected Items</p>
+</body>
+</html>
+
+
+
+
+<!-- 📕QB-36
+Design the use of the var() function to declare & access the variable globally, inside the :root selector. -->
+<html>
+<head>
+<style>
+    :root
+    {   --blue:#1234EE;
+        --white:#FFFFFF;
+    }
+
+    h1
+    {
+        Color:var(--blue);
+    }
+    P
+    {   color:var(--white);
+        Background-color:var(--blue);
+    }
+</style>
+</head>
+<body>
+<h1>this is an example of local and globle variable</h1>
+<p> The var() function in CSS is used to insert the custom property value. </p>
+</body>
+</html>
+
+<!--📕 QB-37
+Write down HTML/CSS code to move the <div> element 50 pixels to the right, and 100 pixels down from its current position -->
+    <html>
+<head>
+<style>
+    div {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        transform: translate(50px,100px);
+    }
+</style>
+</head>
+<body>
+
+<h1>The translate() Method</h1>
+<p>The translate() method moves an element from its current position:</p>
+
+<div>
+This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+
+</body>
+</html>
+
+
+<!-- 📕QB-38
+Write down HTML/CSS code to rotates the <div> element clockwise with 20 degrees. -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotate Div Clockwise</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+      .rotated-div 
+      {
+        width: 200px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-size: 18px;
+        transform: rotate(20deg); /* Rotate by 20 degrees clockwise */
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="rotated-div">Hello, I'm Rotated!</div>
+
+</body>
+</html>
+
+
+<!--📕 QB-39
+Write down HTML/CSS code to rotates the <div> element counter - clockwise with 20 degrees. -->
+    <html>
+<head>
+<style>
+    div {
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    }
+
+    #myDiv 
+    {
+    transform: rotate(-20deg);
+    }
+</style>
+</head>
+<body>
+
+<h1>The rotate() Method</h1>
+
+<p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+
+<div>
+This a normal div element.
+</div>
+
+<div id="myDiv">
+This div element is rotated clockwise 20 degrees.
+</div>
+
+</body>
+</html>
+
+<!--📕 QB-40
+Write down HTML/CSS code to decreases the <div> element to be half of its original width and height. -->
+    <html>
+<head>
+<style>
+    div {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scale(0.5,0.5);
+    }
+</style>
+</head>
+<body>
+
+<h1>The scale() Method</h1>
+<p>The scale() method increases or decreases the size of an element.</p>
+<div>
+This div element is decreased to be half of its original width and height.
+</div>
+</body>
+</html>
+
+<!--📕 QB-41
+Write down HTML/CSS code to increases the <div> element to be two times of its original width, and three times of its original height. -->
+    <html>
+<head>
+<style>
+    div {
+    margin: 150px;
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    transform: scale(2,3);
+    }
+</style>
+</head>
+<body>
+<h1>The scale() Method</h1>
+<p>The scale() method increases or decreases the size of an element.</p>
+<div>
+This div element is two times of its original width, and three times of its original height.
+</div>
+</body>
+</html>
+
+<!--📕 QB-42
+Write down HTML/CSS code that changes the background-color to blue if the viewport is 250 pixels wide or wider (if the viewport is less than 250 pixels, the background-color will be pink). -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<style>
+    body
+    { 
+        background-color:blue;
+    }
+    @media only screen and (max-width:250px)
+    { 
+        body
+        { 
+            background-color:pink;
+        }
+    }
+
+</style>
+</head>
+<body>
+<h1> this is media query example</h1>
+</body>
+</html>
+
+<!--📕 QB-43
+Write down HTML/CSS code that If you want an image to scale down if it has to, but never scale up to be larger than its original size. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scaling Image</title>
+  <style>
+    img {
+      max-width: 100%; /* Set the maximum width to 100% */
+      height: auto; /* Maintain the aspect ratio */
+      display: block; /* Remove any extra space below the image */
+      margin: auto; /* Center the image */
+    }
+  </style>
+</head>
+<body>
+  <img src="your-image.jpg" alt="Your Image Description">
+</body>
+</html>
+
+
+<!-- 📕QB-44
+Write down HTML/CSS code that use the border property to create thumbnail images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thumbnail Images</title>
+  <style>
+    .thumbnail {
+      border: 2px solid #ddd; /* Border color */
+      padding: 5px; /* Padding around the image */
+      margin: 10px; /* Margin between thumbnail images */
+      border-radius: 8px; /* Border radius for rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+    }
+
+    /* Responsive styling */
+    .thumbnail img {
+      max-width: 100%; /* Ensure images don't exceed their container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove extra space below the image */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thumbnail">
+    <img src="image1.jpg" alt="Image 1">
+  </div>
+
+</body>
+</html>
+
+
+<!--📕 QB-45
+Write down HTML/CSS code that use the border-radius property to create rounded images. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rounded Images</title>
+  <style>
+    .rounded-image {
+      border-radius: 50%; /* Set border-radius to 50% for a perfect circle */
+      overflow: hidden; /* Hide any content that overflows the rounded border */
+    }
+
+    /* Responsive styling */
+    .rounded-image img {
+      max-width: 100%; /* Ensure images don't exceed their container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove extra space below the image */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rounded-image">
+    <img src="image1.jpg" alt="Image 1">
+  </div>
+
+</body>
+</html>
+
+
+<!--📕 QB-46
+Write down HTML/CSS code that add some text to an image in the bottom right corner and top left corner along with use of opacity property of image. -->
+<html>
+<head>
+<style>
+    .container 
+    {
+         position: relative;
+    }
+    .topleft 
+    {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+    }
+    .bottomright
+    {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+<h2>Image Text</h2>
+<p>Add some text to an image in the top left corner:</p>
+<div class="container">
+  <img src="C:\Users\hiral\Downloads\download.jpg" alt="Cinque Terre" style="width:100%; height:300;opacity:0.3;">
+  <div class="topleft">Top Left</div>
+  <div class="bottomright">Bottom Right</div>
+</div>
+</body>
+</html>
+
+<!--📕 QB-47
+Write down HTML/CSS code that flip an image as you move the mouse over the image. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Flip on Hover</title>
+  <style>
+    .flippable-image 
+    {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      perspective: 1000px; /* Perspective for 3D effect */
+    }
+
+    .flippable-image img {
+      width: 100%;
+      height: 100%;
+      transition: transform 2s ease; /* Transition for smooth flip effect */
+      transform-style: preserve-3d;
+    }
+
+    .flippable-image:hover img {
+      transform: rotatey(180deg); /* Rotate the image on the Y-axis for the flip effect */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flippable-image">
+    <img src="boxshot.png" alt="Flippable Image">
+  </div>
+</body>
+</html>
+
+
+<!-- 📕QB-48
+Write down HTML/CSS code that shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow. -->
+<html>
+<head>
+<style>
+    #grad1 
+    {
+        height: 200px;
+        background-image: linear-gradient(to bottom right, red, yellow);
+    }
+</style>
+</head>
+<body>
+<h1>Linear Gradient - Diagonal</h1>
+<p>This linear gradient starts red at top left, transitioning to yellow (at bottom right):</p>
+<div id="grad1"></div>
+</body>
+</html>
+
+<!--📕 QB-49
+Write down HTML/CSS code that show how to create a linear gradient (from left to right) with the color of the rainbow and some text like "Rainbow". -->
+<html>
+<head>
+<style>
+    #grad1 
+    {
+        height: 55px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+</style>
+</head>
+<body>
+<div id="grad1" style="text-align:center;margin:auto;color:#d50606;font-size:40px;font-weight:bold">
+Rainbow Background
+</div>
+</body>
+</html>
+
+
+<!-- 📕QB-51
+Write down HTML/CSS code that shows a conic gradient with three colors and a degree for each color. -->
+<html>
+<head>
+<style>
+    #g1 
+    {
+        height: 200px;
+        width: 200px;
+        background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    }
+</style>
+</head>
+<body>
+<h1>Conic Gradient - Defined degree for each color</h1>
+<div id="g1"></div>
+</body>
+</html>
+
+<!-- 📕QB-52
+Write down HTML/CSS code that the animation will last for 4 seconds, and it will gradually change the background-color from "red" to "yellow". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Animation</title>
+  <style>
+    .color-changing-element {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transition: background-color 4s ease; /* Transition for smooth color change */
+    }
+
+    .color-changing-element:hover {
+      background-color: yellow; /* New background color on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="color-changing-element"></div>
+</body>
+</html>
+
+
+<!--📕 QB-53
+Write down HTML/CSS code that will run the animation 3 times before it stops. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Animation</title>
+  <style>
+    .color-changing-element {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      animation: colorChange 4s ease 3; /* Animation for smooth color change, 3 iterations */
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: red;
+      }
+      100% {
+        background-color: yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="color-changing-element"></div>
+
+</body>
+</html>
+
+
+<!--📕 QB-54
+Write down HTML/CSS code that makes the value "alternate"to make the animation run forwards first, then backwards. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Color Animation</title>
+  <style>
+    .color-changing-element {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      animation: colorChange 4s ease 3 alternate; /* Animation for smooth color change, 3 iterations, alternate direction */
+    }
+
+    @keyframes colorChange {
+      0% {
+        background-color: red;
+      }
+      100% {
+        background-color: yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="color-changing-element"></div>
+</body>
+</html>
+

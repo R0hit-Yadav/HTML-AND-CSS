@@ -1,0 +1,559 @@
+p{
+    color: blue;
+    text-align: center;
+}
+/* 1) Inline CSS */
+/* <h1 style="color:green;">A Green Heading</h1> 
+<p style="color:red;">A red paragraph.</p> */
+
+/* 2) Internal Style */
+body 
+{background-color: pink;} 
+h1
+{color: blue;}
+p
+{color: purple;} 
+
+
+/* 3) External CSS */
+/* <link rel="stylesheet" href="style.css">-->for link css with html */
+body {
+    background-color: pink; }
+h1 {
+    color: blue; }
+p{
+    color: purple; }
+
+/* CSS Element Selector */
+p {
+    text-align: center;
+    color: blue;
+    } 
+
+/*  Id Selector */
+#para1 {
+    text-align: center;
+    color: green;
+    } /* <p id="para1">Paragraph with ID</p> */
+
+
+/* Class Selector */
+.center{
+    text-align: center;
+    color: red;
+    }/* <p class="center">P tag using class selector</p>  */
+
+
+/* Universal Selector */
+* {
+    text-align: center; color: brown;
+    }
+
+
+/* Descendant selector */
+ul b
+{
+font-size:20px; color:blue;
+}
+
+
+/* Child Selector */
+ul>b
+{
+font-size:20px; color:blue;
+}
+
+
+/* Attribute selector */
+input[type=text] 
+{
+    width: 150px;
+    display: block;
+    margin-bottom: 10px; 
+    background-color: lightpink;
+}
+input[type=button] 
+{   width: 120px;
+    margin-left: 35px; 
+    display: block; 
+    background-color: yellow;
+}
+
+
+/* CSS colors */
+/* <h3 style="color:orange;">Hello World!</h3> 
+<h4 style="color:rgb(25,140,230);">Keep Smiling</h4> 
+<h5 style="color: #df0fdd;">Be Happy</h5>
+<h6 style="color: #000;">Be Kind</h6> */
+
+
+/* Background Rules: background-color */
+h1 {
+    background-color: rgb(25, 128, 134);
+    }
+div {
+    background-color: #FFC0CB;
+    }
+p {
+    background-color: #bcd;
+    }
+pre {
+    background-color: aqua;
+    }
+
+
+/* Background Rules: background-image */
+body 
+{
+    background-image: url("D:/Full Stack/flwr.jpg");
+    background-repeat: repeat-X;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+    background: pink url("D:/Full Stack/flwr.jpg") repeat-x;
+
+}
+
+
+/* Text Manipulation: text-indent */
+.a {
+    text-indent: 50px; 
+    text-indent: -2em; 
+    text-indent: 5%; 
+}
+
+
+/* Text Manipulation: text-decoration */
+h1 {
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: underline overline;
+    text-decoration: none;
+}
+
+
+/* Text Manipulation: text-transform */
+.a
+{
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    text-transform: none;
+}
+
+
+/* Text Manipulation: text-align */
+.a {
+        text-align: center;
+        text-align: left;
+        text-align: right;
+        text-align: justify;
+    }
+
+
+/* CSS Fonts */
+.p1
+{
+    font-family: "Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+
+/* Font style: */
+.p
+{
+    font-style: normal;
+    font-style: italic;
+
+    font-weight: normal;
+    font-weight: bold;
+
+    font-variant: normal;
+    font-variant: small-caps;
+
+    font-size: 15px;
+    font-size: large;
+    font-size: 150%;
+    font-size: small;
+    font-size: x-small;
+    font-size: xx-small;
+
+}
+
+
+/* CSS text controls: Letter spacing  Word spacing */
+h1
+{
+    letter-spacing: 5px;
+    letter-spacing: -2px;
+
+    word-spacing: 10px;
+    word-spacing: -2px;
+
+}
+
+
+/* CSS Borders: */
+.borders
+{
+    /*border style*/
+    border-style: dotted;
+    border-style: dashed;
+    border-style: solid;
+    border-style: double;
+
+    /*border color*/
+    border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+    border-color: blue;
+
+    /*border-width*/
+    border-width: 5px;
+    border-width: medium;
+    border-width: thick;
+
+    /*border shorthand*/
+    border: 5px solid red;
+    border-left: 5px solid red;
+
+}
+
+
+/* Pseudo classes */
+a:link {
+    color: red;
+    }
+a:visited {
+    color: green;
+    }
+a:hover {
+    color: hotpink;
+    }
+a:active {
+    color: blue;
+    }
+
+
+/* Pseudo Elements */
+p::first-line
+{
+    font-size:30px;
+    font-family:times new roman,sarif; 
+    font-style:italic;
+    font-weight:bold; 
+    font-variant:small-caps;
+}
+p::first-letter
+{
+    font-size:100px;
+}
+h1::before
+{
+    content:url("D:/Full Stack/smile.jfif"); 
+}
+h1::after
+{
+    content:url("D:/Full Stack/smile.jfif"); 
+}
+::marker
+{
+    color:red; 
+    font-size:20px;
+}
+::selection
+{
+    color:green; background-color:yellow;
+}
+
+
+/* CSS Box Model: */
+.p
+{
+    margin:auto;  margin:10px;
+    padding:50px;
+    border:4px solid blue
+}
+
+
+/* CSS positioning: */
+#p1
+{
+    position:static; 
+    border:1px solid green; 
+    height:30%;
+}
+#p2
+{
+    border:2px solid red; 
+    position:relative; 
+    top:40px; 
+    left:40px;
+}
+#p3
+{
+    border:2px solid purple; 
+    position:fixed; 
+    top:20px; 
+    left:30px;
+}
+#p4
+{
+    border:2px solid blue; 
+    position:absolute; 
+    top:100px; 
+    left:100px;
+}
+
+
+/* CSS float property */
+img
+{
+    float:left; 
+    width:50px;
+    height:50px;
+}
+
+
+/* Rounded Images */
+img
+{
+    border: 1px solid blue;
+    border-radius:5px;
+    padding:50px;
+    width:200px;
+
+    max-width:auto;
+    height:auto;
+}
+
+
+/* Transparent Images: */
+img
+{
+    opacity:0.2;
+}
+
+
+/* CSS Gradients */
+/* CSS Linear Gradients: */
+.grad
+{
+    background-image:linear-gradient(pink,red);
+    background-image:linear-gradient(to right,pink,red);
+    background-image:linear-gradient(to bottom right,pink,red);
+
+    background-image: linear-gradient(0deg, blue, powderblue);
+    background-image: linear-gradient(90deg, blue, powderblue);
+    background-image: linear-gradient(180deg, blue, powderblue);
+    background-image: linear-gradient(-90deg, blue, powderblue);
+
+    background-image: linear-gradient(red, yellow, green);
+    background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+    background-image: linear-gradient(red 20%, green 30%, blue 50%);
+
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+
+}
+/*CSS Radial Gradients  */
+.grad
+{
+    background-image: radial-gradient(red, yellow, green);
+    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    background-image: radial-gradient(circle, red, yellow, green);
+}
+/* CSS Conic Gradients */
+.grad
+{
+    background-image: conic-gradient(red, yellow, green);
+    background-image: conic-gradient(red, yellow, green, blue, black);
+
+    background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+
+    background-image: conic-gradient(from 90deg, red, yellow, green);
+
+}
+
+
+/* CSS Transitions */
+div
+{
+    transition-property: width;
+    transition: width 2s;
+    transition-delay: 1s;
+
+    transition:height 4s,width 4s;
+}
+div:hover
+{
+    height: 300px;
+    width: 300px;   
+}
+
+
+/* CSS animation */
+div
+{
+    animation-name: example;
+    background-color: red; 
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-delay: -2s;
+    animation-iteration-count: 3;
+    animation-direction: reverse; 
+
+}
+@keyframes example 
+{
+    from {background-color: red;}
+    to {background-color: yellow;}
+
+    0%  {background-color: red;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+
+    0%  {background-color:red; left:0px; top:0px;} 
+    25% {background-color:yellow; left:200px; top:0px;} 
+    50% {background-color:blue; left:200px; top:200px;} 
+    75% {background-color:green; left:0px; top:200px;} 
+    100% {background-color:red; left:0px; top:0px;}
+
+}
+
+
+/* CSS Display Property */
+.p1
+{
+    display:none;
+    display:inline;
+    display:block;
+    display:inline-block;
+}
+
+
+/* CSS Tooltip */
+.tooltip
+{
+    display:inline-block;
+    border-bottom:1px dotted black;
+}
+.tooltip .tooltiptxt
+{
+    visibility:hidden;
+    width:120px;
+    background-color:black;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+    padding:5px;
+    position:absolute;
+}
+.tooltip:hover .tooltiptxt
+{
+    visibility:visible;
+}
+
+
+/* Flip an Image */
+img:hover 
+{
+    transform: scaleX(-1);
+}
+
+
+/* CSS Pagination */
+.pagination
+{
+    display:inline-block;
+}
+.pagination a
+{
+    color:black;
+    text-decoration:none;
+    border: 1px solid #ddd;
+
+    background-color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+.pagination a.active 
+{
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active) 
+{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+/* <div class="pagination"> 
+<a href="#">&laquo;</a> 
+<a href="#">1</a>
+<a href="#">2</a>
+<a href="#">3</a>
+<a href="#">&raquo;</a> */
+
+
+
+/* CSS Variable */
+:root
+{
+    --blue:#1234EE;
+    --white:#FFDDCC;
+    --xyz:center;
+}
+h1
+{
+    --blue:red;
+    color:var(--blue);
+}
+p
+{
+    color:var(--white); 
+    background-color:var(--blue); 
+    text-align:var(--xyz);
+}
+
+
+/* 2D Transformation */
+div
+{
+    border:20px solid pink;
+    width:50%;
+    height:50%;
+    font-size:20px;
+}
+div:hover
+{
+    transform:translate(180px,180px);
+
+    transform:skew(40deg, 20deg);
+    transform:skew(40deg, 0deg);
+    transform:skew(0deg, 20deg);
+
+    transform:rotate(20deg);
+    transform:rotate(-20deg);
+
+    transform:scaleX(0.5);
+    transform:scaleY(0.5);
+
+    transform:scale(1.5,1.5);
+
+}
+
+
+
+/* Media Queries */
+body
+{
+    background-color:lightgreen;
+}
+@media only screen and (orientation:landscape) 
+{
+    body
+    {
+        background-color:pink;
+    } 
+}
+@media only screen and (max-width:500px){}

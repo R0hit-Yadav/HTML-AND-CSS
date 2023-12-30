@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix.In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body 
+        {
+            background-color: rgb(69, 64, 64);
+            width: 100%;
+            font-family: 'poppins', sans-serif;
+            line-height: 1.6;
+            background-image: url(main.jpg);
+            border: solid 1px red;
+            
+        }
+        body::after 
+        {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: -1;
+        }
+
+        .main img /*for main image*/
+        {
+            width: 1%;
+            max-height: 100vh;
+            object-fit: cover;
+            filter: brightness(60%);
+            z-index: 0;
+        }
+
+        nav /*navbar*/
+        {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #3335369f;
+            z-index: 1;
+        }
+
+        .nav_main 
+        {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img  /*netflix logo*/
+        {
+            height: auto;
+            max-height: 80px;
+        }
+
+        .sel /*english scroll bar*/
+        {
+            display: flex;
+            align-items: center;
+        }
+
+        nav select /*English scroll bar*/
+        {
+            height: 32px;
+            padding: 2px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-family: sans-serif;
+            width: 120px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            margin-right: 10px;
+            text-shadow: 0 0 3px #FF0000;
+        }
+
+        nav button  /*sign in button*/
+        {
+            height: 35px;
+            width: 80px;
+            font-size: 15px;
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            outline: 1px solid black;
+            background-color: rgb(239, 63, 63);
+        }
+        nav button:hover
+        {
+            background-color: red;
+        }
+
+
+        .container 
+        {
+            max-width: 800px;
+            margin: 150px auto 50px;
+            padding: 20px;
+            text-align: center;
+
+        }
+
+        .container h1,/*the biggest indian hits....*/
+        .container h2,
+        .container h3 
+        {
+            color: #faf9f9;
+            margin-bottom: 10px;
+            text-shadow: 0 0 3px #FF0000;
+        }
+
+        .inp 
+        {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container input /*for email in 1 page*/
+        {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 40px;
+            width: 100%;
+            outline: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding-left: 5px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .container button /*get starrted button*/
+        {
+            background-color: rgb(247, 71, 71);
+            border: none;
+            outline: 1px solid black;
+            color: #fff;
+            font-family: 'poppins';
+            font-weight: 500;
+            padding: 0 8px;
+            font-size: 18px;
+            border-radius: 5px;
+            height: 40px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .container button:hover
+        {
+            background-color: red;
+        }
+
+
+        .sec_page /**/
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #000;
+            border: solid 1px red;
+        }
+
+        .content1 
+        {
+            max-width: 600px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .tv img /*tv image*/
+        {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            border: 4px solid rgb(239, 233, 233);
+        }
+
+        .tv video /*tv video*/
+        {
+            width: 99%;
+            max-width: 450px;
+            height: auto;
+            bottom: 400px;
+            border: 2px solid white;
+            transform: translate(-1%, -152%);
+
+        }
+
+        .th-page /*3 page*/
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #000;
+            border: solid 1px red;
+            color: white;
+        }
+
+        .im img /*phone image*/
+        {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .im>.box /*stranger thing box*/
+        {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: rgba(13, 13, 13, 0.6);
+            border: 1.5px solid #7b7878;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box img /*box stranger thig image*/
+        {
+            width: 100%;
+            max-width: 80px;
+            margin: 6px 0;
+        }
+
+        .box p /*stranger thing content*/
+        {
+            color: #ede0e0;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin: 6px 0;
+        }
+
+        .box .gif /*downloding gif*/
+        {
+            width: 100%;
+            max-width: 90px;
+        }
+
+        .box span /*downloding...*/
+        {
+            color: rgb(12, 12, 245);
+        }
+
+        .pp 
+        {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pp h1 
+        {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .pp p 
+        {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+
+        .fr_page  /*fourth page*/
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid red;
+        }
+
+        .txt /*text of page 4 and 5 th pag*/
+        {
+            max-width: 600px;
+            margin-right: 20px;
+            color: white;
+        }
+
+        .img img /*tv phone tablate image*/
+        {
+            width: 100%;
+            max-width: 620px;
+            margin-left: 22px;
+        }
+
+        .img video /*pagi video*/
+        {
+            width: 100%;
+            max-width: 230px;
+            transform: translate(34%, -190%);
+        }
+
+        .fif_page /*fifth page */
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgb(0, 0, 0);
+            border: solid 1px red;
+        }
+
+        .fif_page .img img /*children iamge*/
+        {
+            width: 100%;
+            max-width: 500px;
+            margin-right: 20px;
+            
+        }
+
+        .fif_page .txt /*children page text*/
+        {
+            max-width: 600px;
+        }
+
+        .six_page /*sixth page*/
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #000;
+            border: 2px solid red;
+        }
+
+        .six_page .con 
+        {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .six_page h1 /*six page header*/
+        {
+            color: #22dbec;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .six_page .con .box /*quesions*/
+        {
+            width: 100%;
+            max-width: 100%;
+            margin: 6px 0;
+            padding: 10px;
+            background-color: #3b3939;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .six_page .con .box:hover /*hover effects*/
+        {
+            background-color: #2c2b2b;
+        }
+
+        .six_page .con .box p /*questions background*/
+        {
+            font-size: 18px;
+            font-weight: 350;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        .six_page .con .box .hh h1 /*+ sign*/
+        {
+            width: 40px;
+            color: #f3f3f3;
+            font-weight: lighter;
+            cursor: pointer;
+        }
+
+        .six_page .p_six 
+        {
+            color: #f1eaea;
+            margin-top: 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .six_page .inp 
+        {
+            margin: 0 auto;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .six_page .inp input /*email address*/
+        {
+            height: 40px;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            padding-left: 5px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .six_page .inp input:hover
+        {
+            border: 1.5px solid #ed1313;
+
+        }
+
+
+        .six_page .inp button /*get startted button*/
+        {
+            height: 40px;
+            width: 100%;
+            cursor: pointer;
+            background-color: #ec2b2b;
+        }
+        .six_page .inp button:hover
+        {
+            background-color: #ee1515;
+
+        }
+
+        .sev_page /*seven page*/
+        {
+            padding: 50px 20px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            border: solid 1px red;
+        }
+        
+        .sev_page h4 
+        {
+            margin-top: 20px;
+            margin-bottom: 6px;
+            font-weight: lighter;
+            cursor: pointer;
+    
+        }
+        .sev_page :hover
+        {
+            color:red
+
+        }
+
+        .sev_page span 
+        {
+            text-decoration: underline;
+        }
+
+        .main_box 
+        {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .mini_box 
+        {
+            width: 100%;
+            max-width: 200px;
+            margin: 10px;
+        }
+
+        .mini_box select 
+        {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .mini_box p 
+        {
+            text-decoration: underline;
+            margin: 6px 0;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .mini_box .N_I 
+        {
+            text-decoration: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="main">
+            <div class="container">
+                <h1>The biggest Indian hits. Ready to watch here from ₹149.</h1>
+                <h2>Join today. Cancel anytime.</h2>
+                <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                <div class="inp">
+                    <input type="text" id="" placeholder="Email address">
+                    <button>Get Started ></button>
+                </div>
+            </div>  
+    </div>
+    <div class="fst_two">
+        <nav>
+            <div class="nav_main">
+                <div class="logo">
+                    <img height="70px" src="Netflix.png" alt="Netflix_Logo">
+                </div>
+                <div class="sel">
+                    <select>
+                        <option value="">English</option>
+                        <option value="">Hindi</option>
+                    </select>
+                    <button>Sign in</button>
+                </div>
+            </div>
+        </nav>
+        
+
+        <div class="sec_page">
+            <div class="content1">
+                <h1>Enjoy on your TV</h1>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="tv">
+                <img src="videoooo.webp" alt="tv">
+                <!-- <video src="video-tv-in-0819.m4v" loop muted autoplay></video> -->
+            </div>
+        </div>
+    </div>
+    <div class="th-page">
+        <div class="im">
+            <img src="mobile-0819.jpg" alt="">
+            <div class="box">
+                <img src="boxshot.png" alt="">
+                <div class="text">
+                    <p>Stranger<br> Things</p>
+                    <span>Downloading...</span>
+                </div>
+                <img src="download-icon.gif" alt="" class="gif">
+            </div>
+
+        </div>
+        <div class="pp">
+            <h1>Download your shows to watch offline</h1>
+            <p>Save your favourites easily and always have something to watch.</p>
+        </div>
+    </div>
+
+    <div class="fr_page">
+        <div class="txt">
+            <h1>Watch everywhere</h1>
+            <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+        <div class="img">
+            <img src="device-pile-in.png" alt="">
+            <!-- <video src="video-devices-in.m4v" autoplay loop muted></video> -->
+        </div>
+    </div>
+
+    <div class="fif_page">
+        <div class="img">
+            <img src="kids.png" alt="">
+        </div>
+        <div class="txt">
+            <h1>Create profiles for kids</h1>
+            <p>Send children on adventures with their favourite characters in a space made just for them—free with your
+                membership.</p>
+        </div>
+    </div>
+
+    <div class="six_page">
+        <h1>Frequently Asked Questions</h1>
+        <div class="con">
+            <div class="box">
+                <p>What is Netflix?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>What is Netflix?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>What is Netflix?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>Where can I watch?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>How do I cancel?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>What can I watch on Netflix?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+            <div class="box">
+                <p>Is Netflix good for kids?</p>
+                <div class="hh">
+                    <h1>+</h1>
+                </div>
+            </div>
+        </div>
+        <p class="p_six">Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="inp">
+            <input type="text" id="" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </div>
+    <div class="sev_page">
+        <h4>Questions? Call <span>9173697510</span></h4>
+        <div class="main_box">
+            <div class="mini_box">
+                <p>FAQ</p>
+                <p>Investor Relations</p>
+                <p>Privacy</p>
+                <p>Speed Test</p>
+                <select>
+                    <option value="">English</option>
+                    <option value="">Hindi</option>
+                </select>
+                <p class="N_I">Netflix India</p>
+            </div>
+            <div class="mini_box">
+                <p>Help Centre</p>
+                <p>Jobs</p>
+                <p>Cookie Preferences</p>
+                <p>Legal Notices</p>
+            </div>
+            <div class="mini_box">
+                <p>Account</p>
+                <p>Ways to Watch</p>
+                <p>Corporate Information</p>
+                <p>Only on Netflix</p>
+            </div>
+            <div class="mini_box">
+                <p>Media Centre</p>
+                <p>Terms of Use</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
